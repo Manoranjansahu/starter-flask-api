@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MQTT Over WebSockets Subscriber</title>
-    <link rel="stylesheet" href="subscriber.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='subscriber.css') }}">
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
   </head>
   <body>
@@ -32,6 +32,6 @@
         </div>
       </li>
     </ul>
-    <script src="subscriber.js"></script>
+    <script src="{{ url_for('static', filename='subscriber.js') }}"></script>
   </body>
 </html>
