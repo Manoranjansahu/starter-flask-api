@@ -40,7 +40,7 @@ def send(msg):
 @app.route('/telegram')
 def telegram():
     if __name__ == '__main__':
-        p = multiprocessing.Process(target=schedule_task, args=(5,))
+        p = multiprocessing.Process(daemon=False, target=schedule_task, args=(5,))
         p.start()
     _data = {
             "chat_id": 1069737157,
