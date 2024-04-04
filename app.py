@@ -32,7 +32,7 @@ def send(msg):
     return "ok"
 
 @app.route('/telegram')
-def telegram(msg):
+def telegram():
     if __name__ == '__main__':
         p = multiprocessing.Process(target=schedule_task, args=(5,))
         p.start()
