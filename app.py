@@ -8,6 +8,12 @@ import multiprocessing
 
 app = Flask(__name__)
 def schedule_task(delay):
+    _data = {
+            "chat_id": 1069737157,
+            "text": "thread"
+        }
+    _request = rrequest.Request("https://api.telegram.org/bot6531655799:AAFuGpdFGZRfN7ndifFJwInv_rIPoyIa27s/sendMessage", data=json.dumps(_data).encode('utf8'), headers={"Content-Type": "application/json"})
+    rrequest.urlopen(_request)
     sleep(delay)
     _data = {
             "chat_id": 1069737157,
