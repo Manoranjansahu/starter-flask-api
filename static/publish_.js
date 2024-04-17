@@ -1,4 +1,3 @@
-
 let mqttClient;
 
 window.addEventListener("load", (event) => {
