@@ -8,13 +8,19 @@ import multiprocessing
 
 app = Flask(__name__)
 
+def func(data):
+    for i in range(data)
+        pass
+    return redirect(url_for('test'))
+
 @app.route('/')
 def index():
     return render_template("publisher.html")
 
 @app.route('/mqtt')
 def mqtt():
-    return redirect(url_for('test'))
+    i = 10
+    func(i)
 
 @app.route('/test')
 def test():
