@@ -8,7 +8,7 @@ import multiprocessing
 
 app = Flask(__name__)
 
-def func(data):
+def func():
     return redirect(url_for('test'))
 
 @app.route('/')
@@ -17,8 +17,7 @@ def index():
 
 @app.route('/mqtt')
 def mqtt():
-    i = 10
-    func(i)
+    func()
 
 @app.route('/test')
 def test():
