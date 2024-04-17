@@ -12,6 +12,10 @@ app = Flask(__name__)
 def index():
     return render_template("publisher.html")
 
+@app.route('/mqtt')
+def mqtt():
+    return redirect(url_for('test'))
+
 @app.route('/test')
 def test():
     return render_template("publisher_.html")
