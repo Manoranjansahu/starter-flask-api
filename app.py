@@ -9,7 +9,7 @@ import multiprocessing
 app = Flask(__name__)
 
 def func(data):
-    for i in range(data)
+    for i in range(data):
         pass
     return redirect(url_for('test'))
 
