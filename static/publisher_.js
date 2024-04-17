@@ -1,13 +1,7 @@
-
 let mqttClient;
 
 window.addEventListener("load", (event) => {
   connectToBroker();
-
-  const publishBtn = document.querySelector(".publish");
-  publishBtn.addEventListener("click", function () {
-    publishMessage();
-  });
 });
 
 function connectToBroker() {
@@ -47,19 +41,18 @@ function connectToBroker() {
       "Received Message: " + message.toString() + "\nOn topic: " + topic
     );
   });
+  publishMessage();
+  
 }
 
 function publishMessage() {
-  const messageInput = document.querySelector("#message");
 
-  const topic = document.querySelector("#topic").value.trim();
-  const message = messageInput.value.trim();
+  const topic = "topic/to/publish";
 
   console.log(`Sending Topic: ${topic}, Message: ${message}`);
 
-  mqttClient.publish(topic, message, {
+  mqttClient.publish(topic, "this is test message", {
     qos: 0,
     retain: false,
   });
-  messageInput.value = "";
 }
