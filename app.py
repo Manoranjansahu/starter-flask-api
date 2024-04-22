@@ -5,7 +5,7 @@ import json
 import re
 from time import sleep
 import multiprocessing
-import paho.mqtt.client as mqtt
+# import paho.mqtt.client as mqtt
 import time
 
 app = Flask(__name__)
@@ -16,11 +16,11 @@ def index():
 
 @app.route('/mqtt')
 def mqtt():
-    client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
-    client.connect("broker.emqx.io")
-    client.loop_start()
-    client.publish("topic/to/publish", "data")
-    time.sleep(0.5)
+    # client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
+    # client.connect("broker.emqx.io")
+    # client.loop_start()
+    # client.publish("topic/to/publish", "data")
+    # time.sleep(0.5)
     return "success"
 
 @app.route('/test')
