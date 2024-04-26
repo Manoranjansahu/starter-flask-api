@@ -7,6 +7,11 @@ from time import sleep
 import multiprocessing
 # import paho.mqtt.client as mqtt
 import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
 
 app = Flask(__name__)
 
